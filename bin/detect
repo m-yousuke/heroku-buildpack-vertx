@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # bin/use <build-dir>
 
+echo $1 
 if [ -f $1/src/main/resources/mod.json ]; then
    echo "Vert.x" && exit 0
 else
