@@ -64,7 +64,7 @@ if [ -f compile.sh ]; then
 fi
 
 # Warn if no Procfile is present
-if [ ! -f Procfile ]; then
+if [ ! -f $BUILD_DIR/Procfile ]; then
   echo "-----> No Procfile found. Will use the following default process: "
   echo "       vertx run server.js"
 fi
