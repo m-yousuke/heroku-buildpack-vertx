@@ -57,10 +57,12 @@ export PATH=$PATH:$JAVA_HOME/bin:$VERTX_HOME/bin
 echo "Path is set to"
 echo $PATH
 
-if [ -f compile.sh ]; then
-    echo 'compile.sh file found, executing...'
-    chmod 700 compile.sh
-    ./compile.sh
+cd $BUILD_DIR
+if [ -f "build.gradle" ]; then
+  echo "Gradle build detected. Building"
+  ./gradlew
+  mv build/mods .
+  rm -rf build
 fi
 
 # Warn if no Procfile is present
