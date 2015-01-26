@@ -53,7 +53,8 @@ cd $BUILD_DIR
 export JAVA_HOME="$BUILD_DIR/.jdk8"
 export VERTX_HOME="$BUILD_DIR/.vertx"
 export PATH=$PATH:$JAVA_HOME/bin:$VERTX_HOME/bin
-
+export JAVA_OPT="-Xmx384m -Dfile.encoding=UTF-8"
+export GRADLE_OPTS="-Dfile.encoding=UTF-8"
 echo "Path is set to"
 echo $PATH
 
