@@ -12,7 +12,8 @@ BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-#create the cache dir if it doesn't exist
+#clear the cache
+rm -rf $CACHE_DIR
 mkdir -p $CACHE_DIR
 
 cd $BUILD_DIR
